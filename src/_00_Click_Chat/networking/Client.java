@@ -59,4 +59,13 @@ public class Client {
 			e.printStackTrace();
 		}
 	}
+	public void sendMessage(String s) {
+		try {
+			if(os != null) {
+				os.writeObject("Message sent from client: " + s);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 }
